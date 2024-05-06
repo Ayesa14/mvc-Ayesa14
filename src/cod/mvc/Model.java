@@ -18,4 +18,10 @@ public class Model {
         }
         return null;
     }
+
+    public static Integer cambiarVelocidad(String matricula,Integer velocidad){
+        Coche coche = getCoche(matricula);
+        coche.velocidad = velocidad;
+        return coche.velocidad;
+    }
 }
