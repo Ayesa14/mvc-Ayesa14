@@ -32,18 +32,35 @@ public class Model implements Observable{
         return coche.velocidad;
     }
 
+    /**
+     * Añade un objecto de tipo observer al arraylist [observers]
+     * @param observer objecto a añadir al list
+     */
     @Override
-    public void addObserver(Observer arg) {
+    public void addObserver(Observer observer) {
 
+        observers.add(observer);
     }
 
+    /**
+     * Elimina un objecto de tipo observer del arraylist [observers]
+     * @param observer objecto a eliminar del list
+     */
     @Override
-    public void removeObserver(Observer arg) {
+    public void removeObserver(Observer observer) {
 
+        observers.remove(observer);
     }
 
+    /**
+     * Recorre los observers del arraylist y los notifica de un cambio
+     * @param coche el objecto en el que se ha producido un cambio
+     */
     @Override
-    public void notifyObservers(Coche arg) {
+    public void notifyObservers(Coche coche) {
 
+        for(Observer observer : observers){
+            observer.update(coche);
+        }
     }
 }
