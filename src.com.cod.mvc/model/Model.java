@@ -24,6 +24,7 @@ public class Model implements Observable {
     public static Integer cambiarVelocidad(String matricula,Integer velocidad){
         Coche coche = getCoche(matricula);
         coche.velocidad = velocidad;
+        notifyObservers(coche);
         return coche.velocidad;
     }
 
