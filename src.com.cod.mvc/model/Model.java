@@ -5,9 +5,7 @@ import controller.Observer;
 import java.util.ArrayList;
 
 public class Model implements Observable {
-    public static ArrayList<Coche> parking = new ArrayList<>();
 
-    public static ArrayList<Observer> observers = new ArrayList<>();
 
     public static Coche crearCoche(String matricula,String modelo,Integer velocidad){
         Coche cocheNuevo = new Coche(matricula,modelo,velocidad);
