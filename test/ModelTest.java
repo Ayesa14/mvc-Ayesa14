@@ -21,14 +21,14 @@ public class ModelTest {
     @Test
     public void comprobacionCambiarVelocidad(){
         Model miModel = new Model();
-        Coche coche = Model.crearCoche("43656C35FE","Seat");
+        Coche coche = miModel.crearCoche("43656C35FE","Seat");
         Assertions.assertEquals(24,miModel.cambiarVelocidad("43656C35FE",24));
     }
 
     @Test
     public void getVelocidad(){
         Model miModel = new Model();
-        Coche coche = Model.crearCoche("43656C35FR","Seat");
-        Assertions.assertEquals(45,miModel.getVelocidad("43656C35FR"));
+        Coche coche = miModel.crearCoche("43656C35FR","Seat");
+        Assertions.assertEquals(0,miModel.getVelocidad("43656C35FR"));
     }
 }

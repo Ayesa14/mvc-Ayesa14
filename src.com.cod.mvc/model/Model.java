@@ -16,7 +16,7 @@ public class Model implements Observable {
      * @param modelo variable para el nuevo objecto
      * @return coche creado
      */
-    public static Coche crearCoche(String matricula,String modelo){
+    public Coche crearCoche(String matricula,String modelo){
         Coche cocheNuevo = new Coche(matricula,modelo);
         parking.add(cocheNuevo);
         return cocheNuevo;
@@ -26,7 +26,7 @@ public class Model implements Observable {
      * @param matricula identificador unico del coche
      * @return coche encontrado o null en caso de no existir el coche
      */
-    public static Coche getCoche(String matricula) {
+    public Coche getCoche(String matricula) {
         for (Coche coche : parking) {
             if (coche.matricula.equals(matricula)) {
                 return coche;
@@ -40,7 +40,7 @@ public class Model implements Observable {
      * @param velocidad variable por la que cambiar la velocidad
      * @return nueva velocidad
      */
-    public static Integer cambiarVelocidad(String matricula,Integer velocidad){
+    public Integer cambiarVelocidad(String matricula,Integer velocidad){
         Coche coche = getCoche(matricula);
         coche.velocidad = velocidad;
         return coche.velocidad;
@@ -50,7 +50,7 @@ public class Model implements Observable {
      * @param matricula identificador unico del coche
      * @return velocidad del coche
      */
-    public static Integer getVelocidad(String matricula){
+    public Integer getVelocidad(String matricula){
         Coche coche = getCoche(matricula);
         return coche.velocidad;
     }
