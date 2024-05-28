@@ -7,8 +7,8 @@ import java.util.ArrayList;
 public class Model implements Observable {
 
 
-    public static Coche crearCoche(String matricula,String modelo,Integer velocidad){
-        Coche cocheNuevo = new Coche(matricula,modelo,velocidad);
+    public static Coche crearCoche(String matricula,String modelo){
+        Coche cocheNuevo = new Coche(matricula,modelo);
         parking.add(cocheNuevo);
         return cocheNuevo;
     }

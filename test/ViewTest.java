@@ -10,7 +10,7 @@ import java.io.PrintStream;
 
         @Test
         public void comprobacionMostrarVelocidad() { // ToDo: Pendiente de revision
-            Coche coche = Model.crearCoche("374456-BCD","Seat",35);
+            Coche coche = Model.crearCoche("374456-BCD","Seat");
 
             ByteArrayOutputStream outContent = new ByteArrayOutputStream();
             System.setOut(new PrintStream(outContent));
