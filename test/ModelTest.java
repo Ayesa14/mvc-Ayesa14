@@ -1,9 +1,7 @@
-import cod.mvc.Coche;
-import cod.mvc.Model;
+import model.Coche;
+import model.Model;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import java.util.ArrayList;
 
 public class ModelTest {
     @Test

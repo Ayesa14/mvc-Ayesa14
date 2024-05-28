@@ -1,4 +1,6 @@
-package cod.mvc;
+package model;
+
+import controller.Observer;
 
 public interface Observable {
     void addObserver(Observer arg);

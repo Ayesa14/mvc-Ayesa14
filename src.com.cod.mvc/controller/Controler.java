@@ -1,4 +1,4 @@
-package cod.mvc;
+package controller;
 
 public class Controler {
 

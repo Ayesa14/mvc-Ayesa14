@@ -1,8 +1,10 @@
-package cod.mvc;
+package model;
+
+import controller.Observer;
 
 import java.util.ArrayList;
 
-public class Model implements Observable{
+public class Model implements Observable {
     public static ArrayList<Coche> parking = new ArrayList<>();
 
     public static ArrayList<Observer> observers = new ArrayList<>();
