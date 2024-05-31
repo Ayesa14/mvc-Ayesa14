@@ -17,7 +17,7 @@ public class Model implements Observable {
     /**
      *  Constructor privado
      */
-    private Model(){}
+    public Model(){}
 
     /**
      * Metodo que devuelve la instancia de Model

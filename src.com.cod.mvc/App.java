@@ -1,6 +1,5 @@
 import controller.Controler;
 import model.Model;
-import view.View;
 
 /**
  * Clase App que inicia el programa y pasa el control al controller
