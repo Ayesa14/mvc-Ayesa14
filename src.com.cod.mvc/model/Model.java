@@ -34,6 +34,32 @@ public class Model implements Observable {
         }
         return null;
     }
+
+    /**
+     * metodo que aumenta la velocidad actual
+     * @param matricula
+     * @return nueva velocidad
+     */
+
+    public Integer subirVelocidad(String matricula) {
+        // busca el coche y sube la velocidad
+        getCoche(matricula).velocidad = getCoche(matricula).velocidad + 10;
+        // retorna la nueva velocidad
+        return getCoche(matricula).velocidad;
+    }
+
+    /**
+     * metodo que disminuye la velocidad actual
+     * @param matricula
+     * @return velocidad modificada
+     */
+    public Integer bajarVelocidad(String matricula) {
+        // busca el coche y baja la velocidad
+        getCoche(matricula).velocidad = getCoche(matricula).velocidad - 10;
+        // retorna la nueva velocidad
+        return getCoche(matricula).velocidad;
+    }
+
     /**
      * Cambia la velocidad del coche cuya matricula a sido especificada
      * @param matricula identificador unico del coche

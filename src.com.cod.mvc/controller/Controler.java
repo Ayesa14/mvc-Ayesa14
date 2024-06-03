@@ -1,9 +1,10 @@
 package controller;
 
 import model.Model;
+import view.View;
 
 public class Controler {
-    private final Model miModel = new Model();
+    static Model miModel = new Model();
 
     public Controler(Model miModel) {
 
@@ -31,5 +32,24 @@ public class Controler {
      */
     public void cambiarVelocidad(String matricula, Integer velocidad){
         miModel.cambiarVelocidad(matricula, velocidad);
+    }
+
+
+    /**
+     * Metodo para reducir al velocidad dle coche
+     * @param matricula del coceh al cual vamos a bajar al velocidad
+     */
+    public static void bajarVelocidad(String matricula){
+        int aux = miModel.bajarVelocidad(matricula);
+        View.muestraVelocidad(matricula, aux);
+    }
+
+    /**
+     * Metodo aumentar la velocidad
+     * @param matricula del coche al cual vamos a aumentar la velocidad
+     */
+    public static void aumentarVelocidad(String matricula){
+        int aux = miModel.subirVelocidad(matricula);
+        View.muestraVelocidad(matricula,aux);
     }
 }
