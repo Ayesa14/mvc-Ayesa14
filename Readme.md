@@ -31,6 +31,8 @@ classDiagram
           ArrayList~Coche~: parking
           +crearCoche(String, String, String)
           +getCoche(String)
+          +subirVelocidad(String, Integer):Integer
+          +bajarVelocidad(String, Integer):Integer
           +cambiarVelocidad(String, Integer)
           +getVelocidad(String)
       }
@@ -76,7 +78,34 @@ sequenceDiagram
     deactivate Model
     Controller->>+View: muestraVelocidad("BXK 1234", velocidad)
     activate View
-    View->>-View: System.out.println()
+    View->>-View: System.out.println(velocidad)
+    View-->>Controller: boolean
+    deactivate View
+    Controller->>Model: bajarVelocidad("BXK 1234")
+    activate Model
+    Model-->>Controller: Velocidad bajada
+    deactivate Model
+    Controller->>+View: muestraVelocidad("BXK 1234", velocidad)
+    activate View
+    View->>-View: System.out.println(velocidad)
+    View-->>Controller: boolean
+    deactivate View
+    Controller->>Model: subirVelocidad("BXK 1234")
+    activate Model
+    Model-->>Controller: Velocidad subida
+    deactivate Model
+    Controller->>+View: muestraVelocidad("BXK 1234", velocidad)
+    activate View
+    View->>-View: System.out.println(velocidad)
+    View-->>Controller: boolean
+    deactivate View
+    Controller->>Model: getCoche("BXK 1234")
+    activate Model
+    Model-->>Controller: Coche obtenido
+    deactivate Model
+    Controller->>+View: muestraCoche(coche)
+    activate View
+    View->>-View: System.out.println(coche)
     View-->>Controller: boolean
     deactivate View
 ```
