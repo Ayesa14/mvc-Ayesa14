@@ -9,6 +9,26 @@ public class Model implements Observable {
     public static ArrayList<Coche> parking = new ArrayList<>();
 
     public static ArrayList<Observer> observers = new ArrayList<>();
+    /**
+     * Singleton
+     */
+    private static Model instance;
+
+    /**
+     *  Constructor privado
+     */
+    public Model(){}
+
+    /**
+     * Metodo que devuelve la instancia de Model
+     * @return instance
+     */
+    public static Model getInstance(){
+        if (instance == null) {
+            instance = new Model();
+        }
+        return instance;
+    }
 
     /**
      * Crea un coche con los parametros especificados
